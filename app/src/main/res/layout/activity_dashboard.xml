@@ -10,30 +10,60 @@
     <RelativeLayout
         android:layout_width="match_parent"
         android:layout_height="50dp"
-        android:background="@color/white">
+        android:background="@color/white"
+        android:id="@+id/relative_layout">
+
+        <ImageView
+            android:id="@+id/profile_photo"
+            android:layout_width="30dp"
+            android:layout_height="30dp"
+
+            android:layout_alignParentStart="true"
+            android:layout_centerVertical="true"
+            android:layout_marginStart="10dp" />
 
         <TextView
+            android:id="@+id/username"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="Welcome, Sakshi Jain"
+            android:layout_centerInParent="true"
+            android:layout_centerVertical="true"
+            android:layout_marginEnd="205dp"
             android:textColor="@color/black"
-            android:textSize="20dp"
-            android:layout_centerInParent="true"/>
+            android:textSize="20dp" />
 
         <ImageView
             android:id="@+id/signout_button"
             android:layout_width="30dp"
             android:layout_height="30dp"
-            android:src="@drawable/ic_exit"
-            android:layout_centerVertical="true"
             android:layout_alignParentEnd="true"
-            android:layout_marginEnd="10dp"/>
+            android:layout_centerVertical="true"
+            android:layout_marginEnd="10dp"
+            android:src="@drawable/ic_exit" />
 
     </RelativeLayout>
+    <SearchView
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:queryHint="Search Here"
+        android:iconifiedByDefault="false"
+        android:layout_below="@+id/relative_layout"
 
-<!--    <Button-->
-<!--        android:id="@+id/signout_button"-->
-<!--        android:layout_width="50dp"-->
-<!--        android:layout_height="wrap_content"-->
-<!--        />-->
-</RelativeLayout>
+        android:layout_marginTop="0dp"
+        android:layout_marginBottom="632dp"
+        android:id="@+id/search_bar"/>
+
+    <ListView
+        android:layout_width="match_parent"
+        android:layout_height="fill_parent"
+        android:layout_below="@+id/search_bar"
+        android:layout_marginTop="-632dp"
+        android:id="@+id/myList"/>
+
+
+    <!--    <Button-->
+        <!--        android:id="@+id/signout_button"-->
+        <!--        android:layout_width="50dp"-->
+        <!--        android:layout_height="wrap_content"-->
+        <!--        />-->
+    </RelativeLayout>
