@@ -104,11 +104,7 @@ public class Dashboard extends AppCompatActivity {
         GridLayoutManager gridLayoutManager = new GridLayoutManager(this,1,GridLayoutManager.VERTICAL,false);
         myList.setLayoutManager(gridLayoutManager);
         myList.setAdapter(adapter);
-//        list = new ArrayList<String>();
-//        list.add("Legs");
-//        list.add("hands");
-//
-//        adapter = new ArrayAdapter<>(this,android.R.layout.simple_list_item_1,list);
+
 
         myList.setAdapter(adapter);
 
