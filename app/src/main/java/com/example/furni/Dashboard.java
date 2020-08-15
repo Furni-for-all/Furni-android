@@ -109,23 +109,23 @@ public class Dashboard extends AppCompatActivity {
 //        list.add("hands");
 //
 //        adapter = new ArrayAdapter<>(this,android.R.layout.simple_list_item_1,list);
-//
-//        myList.setAdapter(adapter);
-//
-//
-//        mySearchView.setOnQueryTextListener(new SearchView.OnQueryTextListener() {
-//            @Override
-//            public boolean onQueryTextSubmit(String s) {
-//                return false;
-//            }
-//
-//            @Override
-//            public boolean onQueryTextChange(String s) {
-//
-//                adapter.getFilter().filter(s);
-//                return false;
-//            }
-//        });
+
+        myList.setAdapter(adapter);
+
+
+        mySearchView.setOnQueryTextListener(new SearchView.OnQueryTextListener() {
+            @Override
+            public boolean onQueryTextSubmit(String s) {
+                return false;
+            }
+
+            @Override
+            public boolean onQueryTextChange(String s) {
+
+                adapter.getFilter().filter(s);
+                return false;
+            }
+        });
 
         signout = findViewById(R.id.signout_button);
         signout.setOnClickListener(new View.OnClickListener() {
