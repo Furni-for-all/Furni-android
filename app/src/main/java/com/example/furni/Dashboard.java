@@ -2,6 +2,8 @@ package com.example.furni;
 
 import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
+import androidx.recyclerview.widget.GridLayoutManager;
+import androidx.recyclerview.widget.RecyclerView;
 
 import android.content.Intent;
 import android.graphics.Color;
@@ -14,6 +16,7 @@ import android.view.View;
 import android.widget.ArrayAdapter;
 import android.widget.Button;
 import android.widget.Filterable;
+import android.widget.GridLayout;
 import android.widget.ImageView;
 import android.widget.ListView;
 import android.widget.SearchView;
@@ -32,6 +35,7 @@ import com.google.firebase.auth.FirebaseUser;
 
 
 import java.util.ArrayList;
+import java.util.List;
 
 public class Dashboard extends AppCompatActivity {
 
@@ -41,10 +45,12 @@ public class Dashboard extends AppCompatActivity {
     GoogleSignInClient mGoogleSignInClient;
     private FirebaseAuth.AuthStateListener firebaseAuthListener;
     SearchView mySearchView;
-    ListView myList;
-    ArrayList<String> list;
-    ArrayAdapter<String> adapter;
-    private static String [] SUGGESTION = new String[] {"Legs, Hands"};
+    RecyclerView myList;
+    List<String> titles;
+    List<Integer> images;
+    Adapter adapter;
+//    ArrayList<String> list;
+//    ArrayAdapter<String> adapter;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -75,28 +81,51 @@ public class Dashboard extends AppCompatActivity {
         mySearchView = findViewById(R.id.search_bar);
 
         myList = findViewById(R.id.myList);
-        list = new ArrayList<String>();
-        list.add("Legs");
-        list.add("hands");
 
-        adapter = new ArrayAdapter<>(this,android.R.layout.simple_list_item_1,list);
+        titles = new ArrayList<>();
+        images = new ArrayList<>();
 
+        titles.add("Legs");
+        titles.add("Hands");
+        titles.add("Spinal");
+        titles.add("Eyes");
+        titles.add("Ears");
+        titles.add("Dwarf");
+
+        images.add(R.drawable.legs);
+        images.add(R.drawable.legs);
+        images.add(R.drawable.legs);
+        images.add(R.drawable.legs);
+        images.add(R.drawable.legs);
+        images.add(R.drawable.legs);
+
+        adapter = new Adapter(this, titles,images);
+
+        GridLayoutManager gridLayoutManager = new GridLayoutManager(this,1,GridLayoutManager.VERTICAL,false);
+        myList.setLayoutManager(gridLayoutManager);
         myList.setAdapter(adapter);
-
-
-        mySearchView.setOnQueryTextListener(new SearchView.OnQueryTextListener() {
-            @Override
-            public boolean onQueryTextSubmit(String s) {
-                return false;
-            }
-
-            @Override
-            public boolean onQueryTextChange(String s) {
-
-                adapter.getFilter().filter(s);
-                return false;
-            }
-        });
+//        list = new ArrayList<String>();
+//        list.add("Legs");
+//        list.add("hands");
+//
+//        adapter = new ArrayAdapter<>(this,android.R.layout.simple_list_item_1,list);
+//
+//        myList.setAdapter(adapter);
+//
+//
+//        mySearchView.setOnQueryTextListener(new SearchView.OnQueryTextListener() {
+//            @Override
+//            public boolean onQueryTextSubmit(String s) {
+//                return false;
+//            }
+//
+//            @Override
+//            public boolean onQueryTextChange(String s) {
+//
+//                adapter.getFilter().filter(s);
+//                return false;
+//            }
+//        });
 
         signout = findViewById(R.id.signout_button);
         signout.setOnClickListener(new View.OnClickListener() {

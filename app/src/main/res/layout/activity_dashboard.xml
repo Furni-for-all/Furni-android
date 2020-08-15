@@ -53,12 +53,19 @@
         android:layout_marginBottom="632dp"
         android:id="@+id/search_bar"/>
 
-    <ListView
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/myList"
         android:layout_width="match_parent"
-        android:layout_height="fill_parent"
+        android:layout_height="match_parent"
         android:layout_below="@+id/search_bar"
-        android:layout_marginTop="-632dp"
-        android:id="@+id/myList"/>
+        android:layout_marginTop="-620dp" />
+    <!--
+        <RecyclerView
+            android:layout_width="match_parent"
+            android:layout_height="fill_parent"
+            android:layout_below="@+id/search_bar"
+            android:layout_marginTop="-632dp"
+            android:id="@+id/myList"/>-->
 
 
     <!--    <Button-->
