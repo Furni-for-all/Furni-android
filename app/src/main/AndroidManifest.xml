@@ -9,7 +9,10 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/Theme.MaterialComponents.NoActionBar">
-        <activity android:name=".Dashboard"></activity>
+        <activity android:name=".Spinal"></activity>
+        <activity android:name=".Hands" />
+        <activity android:name=".Legs" />
+        <activity android:name=".Dashboard" />
         <activity android:name=".MainActivity">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />

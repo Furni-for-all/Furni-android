@@ -49,8 +49,7 @@ public class Dashboard extends AppCompatActivity {
     List<String> titles;
     List<Integer> images;
     Adapter adapter;
-//    ArrayList<String> list;
-//    ArrayAdapter<String> adapter;
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -85,19 +84,24 @@ public class Dashboard extends AppCompatActivity {
         titles = new ArrayList<>();
         images = new ArrayList<>();
 
-        titles.add("Legs");
-        titles.add("Hands");
-        titles.add("Spinal");
-        titles.add("Eyes");
-        titles.add("Ears");
         titles.add("Dwarf");
+        titles.add("Ears");
+        titles.add("Eyes");
+        titles.add("Hands");
+        titles.add("Legs");
+        titles.add("Mental Disability");
+        titles.add("Speech Disability");
+        titles.add("Spinal");
 
+        images.add(R.drawable.dwarf);
+        images.add(R.drawable.ears);
+        images.add(R.drawable.eyes);
+        images.add(R.drawable.hands);
         images.add(R.drawable.legs);
-        images.add(R.drawable.legs);
-        images.add(R.drawable.legs);
-        images.add(R.drawable.legs);
-        images.add(R.drawable.legs);
-        images.add(R.drawable.legs);
+        images.add(R.drawable.brain);
+        images.add(R.drawable.speech);
+        images.add(R.drawable.spinal);
+
 
         adapter = new Adapter(this, titles,images);
 

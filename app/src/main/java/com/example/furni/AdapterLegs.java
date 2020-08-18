@@ -1,6 +1,5 @@
 package com.example.furni;
 
-import android.content.ClipData;
 import android.content.Context;
 import android.content.Intent;
 import android.view.LayoutInflater;
@@ -12,23 +11,20 @@ import android.widget.ImageView;
 import android.widget.TextView;
 import android.widget.Toast;
 
-import org.w3c.dom.Text;
-
 import java.util.ArrayList;
 import java.util.List;
 
 import androidx.annotation.NonNull;
 import androidx.recyclerview.widget.RecyclerView;
 
-import static androidx.core.content.ContextCompat.startActivity;
-
-public class Adapter extends RecyclerView.Adapter<Adapter.ViewHolder> implements Filterable{
+public class AdapterLegs extends RecyclerView.Adapter<AdapterLegs.ViewHolder> implements Filterable {
 
     List<String> titles;
     List<Integer> images;
     private List<String> exampleListFull;
     LayoutInflater inflater;
-    public Adapter(Context ctx, List<String> titles, List<Integer> images){
+
+    public AdapterLegs(Context ctx, List<String> titles, List<Integer> images) {
 
         this.titles = titles;
         this.images = images;
@@ -36,10 +32,11 @@ public class Adapter extends RecyclerView.Adapter<Adapter.ViewHolder> implements
         exampleListFull = new ArrayList<>(titles);
     }
 
+
     @NonNull
     @Override
     public ViewHolder onCreateViewHolder(@NonNull ViewGroup parent, int viewType) {
-        View view = inflater.inflate(R.layout.custom_grid_layout,parent,false);
+        View view = inflater.inflate(R.layout.custom_grid_layout_menu, parent, false);
         return new ViewHolder(view);
     }
 
@@ -47,7 +44,6 @@ public class Adapter extends RecyclerView.Adapter<Adapter.ViewHolder> implements
     public void onBindViewHolder(@NonNull ViewHolder holder, int position) {
         holder.title.setText(titles.get(position));
         holder.gridIcon.setImageResource(images.get(position));
-
     }
 
     @Override
@@ -55,31 +51,31 @@ public class Adapter extends RecyclerView.Adapter<Adapter.ViewHolder> implements
         return titles.size();
     }
 
-    public class ViewHolder extends RecyclerView.ViewHolder{
+    public class ViewHolder extends RecyclerView.ViewHolder {
         TextView title;
         ImageView gridIcon;
+
         public ViewHolder(@NonNull View itemView) {
             super(itemView);
-            title = itemView.findViewById(R.id.textView);
-            gridIcon = itemView.findViewById(R.id.imageView);
+            title = itemView.findViewById(R.id.textView5);
+            gridIcon = itemView.findViewById(R.id.imageView2);
 
             itemView.setOnClickListener(new View.OnClickListener() {
                 @Override
                 public void onClick(View view) {
                     Toast.makeText(view.getContext(), "Clicked -->" +getAdapterPosition(), Toast.LENGTH_SHORT).show();
-                    Intent i;
-                    switch (getAdapterPosition()){
+//                    Intent i;
+//                    switch (getAdapterPosition()){
 //                        case 0: i = new Intent(view.getContext(), Legs.class);view.getContext().startActivity(i);break;
 //                        case 1: i = new Intent(view.getContext(), Hands.class);view.getContext().startActivity(i);break;
-//                        case 2: i = new Intent(view.getContext(), Spinal.class);view.getContext().startActivity(i);break;
-                          case 3: i = new Intent(view.getContext(), Hands.class);view.getContext().startActivity(i);break;
-                          case 4: i = new Intent(view.getContext(), Legs.class);view.getContext().startActivity(i);break;
+//                        case 2: i = new Intent(view.getContext(), Legs.class);view.getContext().startActivity(i);break;
+//                        case 3: i = new Intent(view.getContext(), Legs.class);view.getContext().startActivity(i);break;
+//                        case 4: i = new Intent(view.getContext(), Legs.class);view.getContext().startActivity(i);break;
 //                        case 5: i = new Intent(view.getContext(), Legs.class);view.getContext().startActivity(i);break;
 //                        case 6: i = new Intent(view.getContext(), Legs.class);view.getContext().startActivity(i);break;
-                          case 7: i = new Intent(view.getContext(), Spinal.class);view.getContext().startActivity(i);break;
-                        default:break;
-                    }
-
+//                        case 7: i = new Intent(view.getContext(), Legs.class);view.getContext().startActivity(i);break;
+//                        default:break;
+//                    }
                 }
             });
         }
