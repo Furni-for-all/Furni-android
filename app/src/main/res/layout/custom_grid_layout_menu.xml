@@ -3,7 +3,8 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
-    android:layout_height="wrap_content">
+    android:layout_height="wrap_content"
+    android:background="@color/colorPrimary">
 
     <androidx.cardview.widget.CardView
 
@@ -26,7 +27,7 @@
         <androidx.constraintlayout.widget.ConstraintLayout
             android:layout_width="match_parent"
             android:layout_height="160dp"
-            android:background="@drawable/color">
+            android:background="@color/white">
 
             <ImageView
                 android:id="@+id/imageView2"
@@ -48,7 +49,7 @@
                 android:fontFamily="sans-serif-black"
                 android:text="First"
                 android:textAllCaps="false"
-                android:textColor="@color/black"
+                android:textColor="@color/colorPrimaryDark"
                 android:textSize="18sp"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintStart_toStartOf="parent"

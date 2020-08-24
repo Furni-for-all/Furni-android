@@ -8,9 +8,9 @@ import android.net.Uri;
 import android.os.Bundle;
 import android.widget.ImageView;
 import android.widget.SearchView;
-import android.widget.TextView;
 
 import com.bumptech.glide.Glide;
+import com.example.furni.helperClass.AdapterLegs;
 import com.google.android.gms.auth.api.signin.GoogleSignIn;
 import com.google.android.gms.auth.api.signin.GoogleSignInAccount;
 

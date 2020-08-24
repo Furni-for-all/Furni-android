@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="200dp"
+    android:background="@drawable/background"
+    android:gravity="bottom"
+    android:padding="20dp"
+    android:orientation="vertical"
+    >
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/title_header"
+        android:fontFamily="@font/irish_grover"
+        android:text="Furni"
+        android:textColor="@color/black"
+        android:textSize="50sp"
+        android:paddingBottom="20dp">
+
+    </TextView>
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignBottom="@+id/title_header"
+        android:layout_marginBottom="0dp"
+        android:fontFamily="@font/bitter"
+        android:text="You are the artist of your own life."
+        android:textColor="@color/white" />
+
+</RelativeLayout>

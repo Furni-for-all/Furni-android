@@ -1,6 +1,5 @@
-package com.example.furni;
+package com.example.furni.helperClass;
 
-import android.content.ClipData;
 import android.content.Context;
 import android.content.Intent;
 import android.view.LayoutInflater;
@@ -12,15 +11,16 @@ import android.widget.ImageView;
 import android.widget.TextView;
 import android.widget.Toast;
 
-import org.w3c.dom.Text;
+import com.example.furni.Hands;
+import com.example.furni.Legs;
+import com.example.furni.R;
+import com.example.furni.Spinal;
 
 import java.util.ArrayList;
 import java.util.List;
 
 import androidx.annotation.NonNull;
 import androidx.recyclerview.widget.RecyclerView;
-
-import static androidx.core.content.ContextCompat.startActivity;
 
 public class Adapter extends RecyclerView.Adapter<Adapter.ViewHolder> implements Filterable{
 

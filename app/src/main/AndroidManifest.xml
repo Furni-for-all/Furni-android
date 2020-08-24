@@ -9,7 +9,8 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/Theme.MaterialComponents.NoActionBar">
-        <activity android:name=".Spinal"></activity>
+        <activity android:name=".living_room"></activity>
+        <activity android:name=".Spinal" />
         <activity android:name=".Hands" />
         <activity android:name=".Legs" />
         <activity android:name=".Dashboard" />
@@ -20,6 +21,10 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
+
+        <meta-data
+            android:name="preloaded_fonts"
+            android:resource="@array/preloaded_fonts" />
     </application>
 
 </manifest>

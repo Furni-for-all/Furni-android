@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+    <item android:title="List">
+    <group android:checkableBehavior="single">
+    <item android:id="@+id/item1"
+        android:title="Dashboard"
+
+        ></item>
+    <item android:id="@+id/item2"
+        android:title="Item 2"
+        ></item>
+    <item android:id="@+id/item3"
+        android:title="item 3"
+        >
+        <menu>
+            <item android:id="@+id/subitem1"
+                android:title="Sub item 1"
+                ></item>
+            <item android:id="@+id/subitem2"
+                android:title="sub item 2">
+
+            </item>
+        </menu>
+
+        ></item>
+</group>
+    </item>
+    <item android:title="Profile" >
+        <menu>
+            <group android:checkableBehavior="single">
+                <item android:id="@+id/nav_logout"
+                    android:title="Logout"
+                    android:icon="@drawable/ic_exit"
+                    >
+
+                </item>
+            </group>
+        </menu>
+    </item>
+</menu>

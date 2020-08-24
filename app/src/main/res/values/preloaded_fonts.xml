@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <array name="preloaded_fonts" translatable="false">
+        <item>@font/alef</item>
+        <item>@font/baloo</item>
+        <item>@font/bitter</item>
+        <item>@font/bubbler_one</item>
+        <item>@font/irish_grover</item>
+    </array>
+</resources>
