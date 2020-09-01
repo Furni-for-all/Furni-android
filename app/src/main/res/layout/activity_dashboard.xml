@@ -42,7 +42,7 @@
             android:src="@drawable/ic_exit" />
 
     </RelativeLayout>
-    <SearchView
+   <!-- <SearchView
         android:layout_width="match_parent"
         android:layout_height="50dp"
         android:queryHint="Search Here"
@@ -50,14 +50,14 @@
         android:layout_below="@+id/relative_layout"
         android:layout_marginTop="0dp"
         android:layout_marginBottom="632dp"
-        android:id="@+id/search_bar"/>
+        android:id="@+id/search_bar"/>-->
 
     <androidx.recyclerview.widget.RecyclerView
         android:id="@+id/myList"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:layout_below="@+id/search_bar"
-        android:layout_marginTop="-620dp" />
+        android:layout_below="@+id/relative_layout"
+        android:layout_marginTop="0dp" />
     <!--
         <RecyclerView
             android:layout_width="match_parent"

@@ -32,7 +32,6 @@ public class Hands extends AppCompatActivity {
         setContentView(R.layout.activity_hands);
         //name = findViewById(R.id.username);
         profile_photo = findViewById(R.id.profile_photo);
-
         //mySearchView = findViewById(R.id.search_bar);
         myList = findViewById(R.id.myList);
 

@@ -39,8 +39,8 @@ public class Dashboard extends AppCompatActivity {
     RecyclerView myList;
     List<String> titles;
     List<Integer> images;
-    Adapter adapter;
 
+    Adapter adapter;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -65,6 +65,10 @@ public class Dashboard extends AppCompatActivity {
 //                }
 //            }
 //        };
+
+
+
+
 
         name = findViewById(R.id.username);
         profile_photo = findViewById(R.id.profile_photo);
@@ -100,19 +104,23 @@ public class Dashboard extends AppCompatActivity {
         myList.setLayoutManager(gridLayoutManager);
         myList.setAdapter(adapter);
 
-        mySearchView.setOnQueryTextListener(new SearchView.OnQueryTextListener() {
-            @Override
-            public boolean onQueryTextSubmit(String s) {
-                return false;
-            }
 
-            @Override
-            public boolean onQueryTextChange(String s) {
 
-                adapter.getFilter().filter(s);
-                return false;
-            }
-        });
+
+
+//        mySearchView.setOnQueryTextListener(new SearchView.OnQueryTextListener() {
+//            @Override
+//            public boolean onQueryTextSubmit(String s) {
+//                return false;
+//            }
+//
+//            @Override
+//            public boolean onQueryTextChange(String s) {
+//
+//                adapter.getFilter().filter(s);
+//                return true;
+//            }
+//        });
 
         signout = findViewById(R.id.signout_button);
         signout.setOnClickListener(new View.OnClickListener() {

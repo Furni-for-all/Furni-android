@@ -1,5 +1,6 @@
 package com.example.furni.helperClass;
 
+import android.content.ClipData;
 import android.content.Context;
 import android.content.Intent;
 import android.view.LayoutInflater;
@@ -22,23 +23,26 @@ import java.util.List;
 import androidx.annotation.NonNull;
 import androidx.recyclerview.widget.RecyclerView;
 
-public class Adapter extends RecyclerView.Adapter<Adapter.ViewHolder> implements Filterable{
+public class Adapter extends RecyclerView.Adapter<Adapter.ViewHolder>{
 
     List<String> titles;
     List<Integer> images;
-    private List<String> exampleListFull;
+
     LayoutInflater inflater;
     public Adapter(Context ctx, List<String> titles, List<Integer> images){
 
         this.titles = titles;
         this.images = images;
         this.inflater = LayoutInflater.from(ctx);
-        exampleListFull = new ArrayList<>(titles);
+//        exampleListFull = new ArrayList<>(titles,images);
+//        ItemsModel itemsModel = new ItemsModel(titles, images);
+//        itemList.add(itemsModel);
     }
 
     @NonNull
     @Override
     public ViewHolder onCreateViewHolder(@NonNull ViewGroup parent, int viewType) {
+
         View view = inflater.inflate(R.layout.custom_grid_layout,parent,false);
         return new ViewHolder(view);
     }
@@ -85,35 +89,38 @@ public class Adapter extends RecyclerView.Adapter<Adapter.ViewHolder> implements
         }
     }
 
-    @Override
-    public Filter getFilter() {
-        return exampleFilter;
-    }
-
-    private Filter exampleFilter = new Filter() {
-        @Override
-        protected FilterResults performFiltering(CharSequence constraint) {
-            List<String> filteredList = new ArrayList<>();
-            if (constraint == null || constraint.length() == 0) {
-                filteredList.addAll(exampleListFull);
-            } else {
-                String filterPattern = constraint.toString().toLowerCase().trim();
-                for (String item : exampleListFull) {
-                    if (item.toLowerCase().contains(filterPattern)) {
-                        filteredList.add(item);
-                    }
-                }
-            }
-            FilterResults results = new FilterResults();
-            results.values = filteredList;
-            return results;
-        }
-
-        @Override
-        protected void publishResults(CharSequence constraint, FilterResults results) {
-            titles.clear();
-            titles.addAll((List) results.values);
-            notifyDataSetChanged();
-        }
-    };
+//    @Override
+//    public Filter getFilter() {
+//        return exampleFilter;
+//    }
+//
+//    private Filter exampleFilter = new Filter() {
+//
+//        @Override
+//        protected FilterResults performFiltering(CharSequence constraint) {
+//            List<String> filteredList = new ArrayList<>();
+//            if (constraint == null || constraint.length() == 0) {
+//                filteredList.addAll(exampleListFull);
+//
+//
+//            } else {
+//                String filterPattern = constraint.toString().toLowerCase().trim();
+//                for (String item : exampleListFull) {
+//                    if (item.toLowerCase().contains(filterPattern)) {
+//                        filteredList.add(item);
+//                    }
+//                }
+//            }
+//            FilterResults results = new FilterResults();
+//            results.values = filteredList;
+//            return results;
+//        }
+//
+//        @Override
+//        protected void publishResults(CharSequence constraint, FilterResults results) {
+//            titles.clear();
+//            titles.addAll((List) results.values);
+//            notifyDataSetChanged();
+//        }
+//    };
 }

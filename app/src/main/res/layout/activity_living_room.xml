@@ -13,13 +13,16 @@
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         android:id="@+id/nav_view"
-android:background="@color/colorPrimary"
+        android:background="@color/colorPrimary"
         app:headerLayout="@layout/header"
         android:theme="@style/navigationtheme"
         app:menu="@menu/navigation_header"
         android:layout_gravity= "start"
         tools:ignore="MissingConstraints"></com.google.android.material.navigation.NavigationView>
-<RelativeLayout
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+    <RelativeLayout
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:id="@+id/content">
@@ -62,13 +65,13 @@ android:background="@color/colorPrimary"
     </RelativeLayout>
     <RelativeLayout
         android:layout_width="wrap_content"
-        android:layout_height="225dp"
+        android:layout_height="265dp"
         android:layout_below="@+id/relative_layout"
         android:id="@+id/chair_raisers_relative_layout"
         android:background="@color/colorPrimary"
 
-        android:paddingHorizontal="20dp"
-android:paddingVertical="5dp"        >
+        android:paddingLeft="20dp"
+        android:paddingVertical="5dp">
 
         <TextView
             android:id="@+id/title_1"
@@ -87,11 +90,12 @@ android:paddingVertical="5dp"        ></androidx.recyclerview.widget.RecyclerVie
     </RelativeLayout>
     <RelativeLayout
         android:layout_width="wrap_content"
-        android:layout_height="225dp"
+        android:layout_height="265dp"
         android:layout_below="@+id/chair_raisers_relative_layout"
+        android:id="@+id/cushions_relative_layout"
         android:background="@color/colorPrimary"
 
-        android:paddingHorizontal="20dp"
+        android:paddingLeft="20dp"
         android:paddingVertical="5dp"        >
 
         <TextView
@@ -99,7 +103,7 @@ android:paddingVertical="5dp"        ></androidx.recyclerview.widget.RecyclerVie
             android:layout_width="wrap_content"
             android:layout_height="25dp"
             android:fontFamily="@font/baloo"
-            android:text="Cushions and Blankets"
+            android:text="Cushions"
             android:textColor="@color/black"
             android:textSize="22sp"></TextView>
         <androidx.recyclerview.widget.RecyclerView
@@ -109,5 +113,56 @@ android:paddingVertical="5dp"        ></androidx.recyclerview.widget.RecyclerVie
             android:id="@+id/cushions_layout"
             android:paddingVertical="5dp"        ></androidx.recyclerview.widget.RecyclerView>
     </RelativeLayout>
+    <RelativeLayout
+        android:layout_width="wrap_content"
+        android:layout_height="265dp"
+        android:layout_below="@+id/cushions_relative_layout"
+        android:id="@+id/over_chair_relative_layout"
+        android:background="@color/colorPrimary"
+
+        android:paddingLeft="20dp"
+        android:paddingVertical="5dp"        >
+
+        <TextView
+            android:id="@+id/title_3"
+            android:layout_width="wrap_content"
+            android:layout_height="25dp"
+            android:fontFamily="@font/baloo"
+            android:text="Over Chair Tables"
+            android:textColor="@color/black"
+            android:textSize="22sp"></TextView>
+        <androidx.recyclerview.widget.RecyclerView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_below="@+id/title_3"
+            android:id="@+id/chairsidetables_layout"
+            android:paddingVertical="5dp"        ></androidx.recyclerview.widget.RecyclerView>
+    </RelativeLayout>
+    <RelativeLayout
+        android:layout_width="wrap_content"
+        android:layout_height="265dp"
+        android:layout_below="@+id/over_chair_relative_layout"
+        android:id="@+id/seatliftassist_relative_layout"
+        android:background="@color/colorPrimary"
+
+        android:paddingLeft="20dp"
+        android:paddingVertical="5dp"        >
+
+        <TextView
+            android:id="@+id/title_4"
+            android:layout_width="wrap_content"
+            android:layout_height="25dp"
+            android:fontFamily="@font/baloo"
+            android:text="Seat Lift Assist"
+            android:textColor="@color/black"
+            android:textSize="22sp"></TextView>
+        <androidx.recyclerview.widget.RecyclerView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_below="@+id/title_4"
+            android:id="@+id/seatliftassist_layout"
+            android:paddingVertical="5dp"        ></androidx.recyclerview.widget.RecyclerView>
+    </RelativeLayout>
 </RelativeLayout>
+    </ScrollView>
 </androidx.drawerlayout.widget.DrawerLayout>

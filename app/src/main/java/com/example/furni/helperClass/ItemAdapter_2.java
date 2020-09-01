@@ -18,7 +18,7 @@ import androidx.annotation.NonNull;
 import androidx.recyclerview.widget.RecyclerView;
 
 
-public class ItemAdapter_2 extends RecyclerView.Adapter<ItemAdapter_2.ViewHolder> implements Filterable {
+public class ItemAdapter_2 extends RecyclerView.Adapter<ItemAdapter_2.ViewHolder>{
 
     List<String> titles;
     List<Integer> images;
@@ -32,10 +32,10 @@ public class ItemAdapter_2 extends RecyclerView.Adapter<ItemAdapter_2.ViewHolder
         this.inflater = LayoutInflater.from(ctx);
     }
 
-    @Override
+/*    @Override
     public Filter getFilter() {
         return null;
-    }
+    }*/
 
     @NonNull
     @Override

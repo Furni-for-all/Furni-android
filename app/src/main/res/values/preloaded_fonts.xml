@@ -2,9 +2,11 @@
 <resources>
     <array name="preloaded_fonts" translatable="false">
         <item>@font/alef</item>
+        <item>@font/athiti_extralight</item>
         <item>@font/baloo</item>
         <item>@font/bitter</item>
         <item>@font/bubbler_one</item>
+        <item>@font/gfs_neohellenic</item>
         <item>@font/irish_grover</item>
     </array>
 </resources>
